@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1730597184211022793}
   - component: {fileID: 8031344532769901421}
   - component: {fileID: -9144268521874355800}
+  - component: {fileID: 6903455763094959714}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -99,3 +100,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breadBullet: {fileID: 5252469809504170724, guid: 736cdc536e121964aaac7a53daf6098f, type: 3}
   force: {x: 200, y: 300}
+  points: {fileID: 6903455763094959714}
+--- !u!114 &6903455763094959714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5917289334766900028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0724885a5e09884e8514694ed83414a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  textScore: {fileID: 0}

@@ -8,6 +8,9 @@ public class mouse_test : MonoBehaviour
     GameObject breadBullet;
     [SerializeField]
     Vector2 force;
+    [SerializeField]
+    points points;
+    public int hp;
 
     Vector2 mousePosition;
     
@@ -26,12 +29,14 @@ public class mouse_test : MonoBehaviour
             {
                 Rigidbody2D BB = Instantiate(breadBullet, transform.position, Quaternion.identity).GetComponent<Rigidbody2D>();
                 BB.AddForce(force);
+                BB.GetComponent<bread_Script>().points = points;
                 Destroy(BB, 5);
             }
             else
             {
                 Rigidbody2D BB = Instantiate(breadBullet, transform.position, Quaternion.identity).GetComponent<Rigidbody2D>();
                 BB.AddForce(force * new Vector2(-1, 1));
+                BB.GetComponent<bread_Script>().points = points;
                 Destroy(BB, 5);
             }
         }

@@ -11,4 +11,5 @@ public class House : MonoBehaviour
     {
         transform.position -= new Vector3(0, speed);
     }
+
 }
