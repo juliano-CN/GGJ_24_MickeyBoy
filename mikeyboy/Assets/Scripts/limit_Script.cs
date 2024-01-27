@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class limit_Script : MonoBehaviour
 {
     [SerializeField]
+    inventory inventory;
+    [SerializeField]
     mouse_test player;
     public Text textHP;
 
@@ -16,8 +18,10 @@ public class limit_Script : MonoBehaviour
             player.hp -= 1;
             Destroy(collision.gameObject);
             textHP.text = player.hp.ToString();
-            //if(player.hp <= 0)
-
+            if(player.hp <= 0)
+            {
+                inventory.score += player.GetComponent<points>().score;
+            }
         }
     }
 }

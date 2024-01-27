@@ -612,6 +612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 424a8fae6f3ec8149ad5a1ac328247d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: {fileID: 11400000, guid: 20b8cf15570c6b54ea6ded5f7f378da4, type: 2}
   player: {fileID: 1138595321093671654}
   textHP: {fileID: 1713935650}
 --- !u!61 &1520279125
