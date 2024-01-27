@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class mouse_test : MonoBehaviour
 {
+    [SerializeField]
+    GameObject breadBullet;
+    [SerializeField]
+    Vector2 force;
+
     Vector2 mousePosition;
     
-
-    // Update is called once per frame
     void Update()
     {
         //Debug.Log(mousePosition);
@@ -21,11 +24,15 @@ public class mouse_test : MonoBehaviour
             if (Mathf.Abs(Input.mousePosition.x - mousePosition.x) < 10) return;
             if(Input.mousePosition.x > mousePosition.x)
             {
-                Debug.Log("direita");
+                Rigidbody2D BB = Instantiate(breadBullet, transform.position, Quaternion.identity).GetComponent<Rigidbody2D>();
+                BB.AddForce(force);
+                Destroy(BB, 5);
             }
             else
             {
-                Debug.Log("esquerda");
+                Rigidbody2D BB = Instantiate(breadBullet, transform.position, Quaternion.identity).GetComponent<Rigidbody2D>();
+                BB.AddForce(force * new Vector2(-1, 1));
+                Destroy(BB, 5);
             }
         }
     }
