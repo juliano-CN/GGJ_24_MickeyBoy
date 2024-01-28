@@ -7,6 +7,8 @@ public class mouse_test : MonoBehaviour
     [SerializeField]
     GameObject breadBullet;
     [SerializeField]
+    AudioSource disparoAudio;
+    [SerializeField]
     Vector2 force;
     [SerializeField]
     points points;
@@ -25,7 +27,8 @@ public class mouse_test : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             if (Mathf.Abs(Input.mousePosition.x - mousePosition.x) < 10) return;
-            if(Input.mousePosition.x > mousePosition.x)
+            disparoAudio.Play();
+            if (Input.mousePosition.x > mousePosition.x)
             {
                 Rigidbody2D BB = Instantiate(breadBullet, transform.position, Quaternion.identity).GetComponent<Rigidbody2D>();
                 BB.AddForce(force);
