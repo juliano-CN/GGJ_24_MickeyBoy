@@ -24,6 +24,7 @@ public class limit_Script : MonoBehaviour
             textHP.text = player.hp.ToString();
             if(player.hp <= 0)
             {
+                inventory.lastScore = inventory.score;
                 inventory.score += player.GetComponent<points>().score;
                 SceneManager.LoadScene("BakedGoodsStore");
             }
