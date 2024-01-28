@@ -78,8 +78,8 @@ MonoBehaviour:
     max: Infinity
     enumValues: []
     descendantCount: 0
-  - name: New Texture2D
-    path: New Texture2D
+  - name: Texture
+    path: Texture
     tooltip: 
     sheetType: m_NamedObject
     realType: Texture2D
@@ -1811,7 +1811,7 @@ MonoBehaviour:
   m_InputSlots: []
   m_OutputSlots:
   - {fileID: 8926484042661614638}
-  m_ExposedName: New Texture2D
+  m_ExposedName: Texture
   m_Exposed: 1
   m_Order: 2
   m_Category: 
