@@ -12,7 +12,7 @@ public class limit_Script : MonoBehaviour
     [SerializeField]
     AudioSource perderPontoAudio;
     [SerializeField]
-    mouse_test player;
+    MouseTest player;
     public Text textHP;
     [SerializeField] GameObject UIScore;
     [SerializeField] SpawnHouse spawnLeft, spawnRigth;
@@ -28,6 +28,10 @@ public class limit_Script : MonoBehaviour
         if (spawnLeft == null || spawnRigth == null)
         {
             Debug.LogError("Precisa setar os Objectos de Spawn Left e Right.");
+        }
+
+        if (player == null) {
+            Debug.LogError("Precisa setar o Player (MouseTest).");
         }
     }
 
@@ -54,7 +58,7 @@ public class limit_Script : MonoBehaviour
                     UIScore.SetActive(true);
                     canCount = false;
 
-                    //SceneManager.LoadScene("BakedGoodsStore");
+                    player.canInput = false;                    
                 }
             }                      
         }

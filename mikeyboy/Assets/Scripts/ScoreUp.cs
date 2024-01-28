@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ScoreUp : MonoBehaviour
@@ -18,6 +19,7 @@ public class ScoreUp : MonoBehaviour
 
     bread paoAtual;
     bread proximoPao;
+    public float timeAwaiting = 1.5f;
 
     void Start()
     {
@@ -45,11 +47,17 @@ public class ScoreUp : MonoBehaviour
         primeiroPao.sprite = paoAtual.sprite;
         segundoPao.sprite = proximoPao.sprite;
         progressBar.fillAmount = ((float)inventory.lastScore - (float)paoAtual.value) / ((float)proximoPao.value - (float)paoAtual.value);
+        
         if(inventory.lastScore < inventory.score)
         {
             yield return new WaitForSeconds(0.05f);
             inventory.lastScore += 1;
             StartCoroutine(nameof(AtualizaScore));
+        }
+        else
+        {
+            yield return new WaitForSeconds(timeAwaiting);
+            SceneManager.LoadScene(1);
         }
     }
 }
