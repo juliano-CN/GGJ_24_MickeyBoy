@@ -21,6 +21,11 @@ public class ScoreUp : MonoBehaviour
 
     void Start()
     {
+        //StartCoroutine(nameof(AtualizaScore));
+    }
+
+    private void OnEnable()
+    {
         StartCoroutine(nameof(AtualizaScore));
     }
 

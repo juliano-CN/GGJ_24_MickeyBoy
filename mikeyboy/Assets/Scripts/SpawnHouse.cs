@@ -9,6 +9,7 @@ public class SpawnHouse : MonoBehaviour
     [SerializeField]
     Vector2 spawnIntervalRange;
     [SerializeField] public Vector3 rotat;
+    [SerializeField] public bool canSpawn = true;
 
 
     void Start()
@@ -18,7 +19,7 @@ public class SpawnHouse : MonoBehaviour
 
     IEnumerator Spawn()
     {
-        while (true)
+        while (canSpawn)
         {
             yield return new WaitForSeconds(Random.Range(spawnIntervalRange.x, spawnIntervalRange.y));
             GameObject _house = Instantiate(house, transform.position, Quaternion.Euler(rotat));//Quaternion.Euler(rotat)
