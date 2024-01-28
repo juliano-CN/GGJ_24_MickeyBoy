@@ -21,7 +21,7 @@ public class SpawnHouse : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(Random.Range(spawnIntervalRange.x, spawnIntervalRange.y));
-            GameObject _house = Instantiate(house, transform.position, Quaternion.Euler(rotat));
+            GameObject _house = Instantiate(house, transform.position, Quaternion.Euler(rotat));//Quaternion.Euler(rotat)
             Destroy(_house, 10);
         }
     }

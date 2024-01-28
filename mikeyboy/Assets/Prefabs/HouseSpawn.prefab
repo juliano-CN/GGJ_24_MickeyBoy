@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   house: {fileID: 3829253054159195669, guid: 6122eaabaa3daaa4b91e93d76764f8ea, type: 3}
   spawnIntervalRange: {x: 2, y: 5}
-  rotat: {x: 0, y: 0, z: 0}
+  rotat: {x: 0, y: 0, z: 90}

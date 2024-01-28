@@ -7,6 +7,7 @@ using System;
 public class inventory : ScriptableObject
 {
     public int score;
+    public int lastScore;
     public bread[] breads; 
 }
 
