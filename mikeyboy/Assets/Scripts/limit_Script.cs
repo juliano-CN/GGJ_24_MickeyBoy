@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
@@ -17,6 +18,7 @@ public class limit_Script : MonoBehaviour
     [SerializeField] GameObject UIScore;
     [SerializeField] SpawnHouse spawnLeft, spawnRigth;
     [SerializeField] bool canCount = true;
+    [SerializeField] VisualEffect[] emotesFail;
 
     private void Start()
     {
@@ -46,6 +48,10 @@ public class limit_Script : MonoBehaviour
                 player.hp -= 1;
                 perderPontoAudio.Play();
                 textHP.text = player.hp.ToString();
+                if (collision.transform.position.x > 0)
+                    emotesFail[0].Play();
+                else
+                    emotesFail[1].Play();
 
                 if (player.hp <= 0)
                 {
@@ -58,7 +64,7 @@ public class limit_Script : MonoBehaviour
                     UIScore.SetActive(true);
                     canCount = false;
 
-                    player.canInput = false;                    
+                    player.canInput = false;
                 }
             }                      
         }

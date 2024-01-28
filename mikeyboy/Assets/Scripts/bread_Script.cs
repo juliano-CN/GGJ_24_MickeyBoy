@@ -8,7 +8,6 @@ public class bread_Script : MonoBehaviour
     public points points;
     [SerializeField] VisualEffect vfx;
     [SerializeField] inventory inventory;
-    [SerializeField] AudioSource pointAudio;
 
     bread paoAtual;
 
@@ -29,10 +28,12 @@ public class bread_Script : MonoBehaviour
     {
         if(collision.tag == "house")
         {
-            points.addPoint(paoAtual.score);
+            if(transform.position.x > 0)
+                points.addPoint(paoAtual.score, 0);
+            else
+                points.addPoint(paoAtual.score, 1);
             Destroy(collision);
             vfx.enabled = false;
-            pointAudio.Play();
         }
     }
 }
