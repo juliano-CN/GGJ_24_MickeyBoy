@@ -8,6 +8,7 @@ public class bread_Script : MonoBehaviour
     public points points;
     [SerializeField] VisualEffect vfx;
     [SerializeField] inventory inventory;
+    [SerializeField] AudioSource pointAudio;
 
     bread paoAtual;
 
@@ -30,6 +31,8 @@ public class bread_Script : MonoBehaviour
         {
             points.addPoint(paoAtual.score);
             Destroy(collision);
+            vfx.enabled = false;
+            pointAudio.Play();
         }
     }
 }
