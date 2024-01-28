@@ -14,13 +14,17 @@ public class inventory : ScriptableObject
 public class bread
 {
     public string breadName;
+    public Sprite sprite;
+    public Texture2D textura;
     public int value;
-    public bool owner;
+    public int score;
 
-    public bread(string breadName, int value,bool owner)
+    public bread(string breadName, int value, Sprite sprite, int score, Texture2D textura)
     {
         this.breadName = breadName;
         this.value = value;
-        this.owner = owner;
+        this.score = score;
+        this.sprite = sprite;
+        this.textura = textura;
     }
 }

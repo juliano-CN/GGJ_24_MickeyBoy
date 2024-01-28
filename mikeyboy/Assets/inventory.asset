@@ -14,15 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   breads:
-  - breadName: "p\xE3o franc\xEAs"
+  - breadName: "P\xE3o Franc\xEAs"
+    sprite: {fileID: 21300000, guid: a7116414db59b2043b3a15af3ede68cb, type: 3}
+    textura: {fileID: 2800000, guid: a7116414db59b2043b3a15af3ede68cb, type: 3}
     value: 0
-    owner: 1
-  - breadName: "p\xE3o de queijo"
+    score: 1
+  - breadName: Baguete
+    sprite: {fileID: 21300000, guid: 32705b7f745ccda4aab13885aae3f897, type: 3}
+    textura: {fileID: 2800000, guid: 32705b7f745ccda4aab13885aae3f897, type: 3}
     value: 50
-    owner: 0
-  - breadName: Donout
+    score: 2
+  - breadName: "P\xE3o de Forma"
+    sprite: {fileID: 21300000, guid: f697ac14375c7414bb4459322ecd51e0, type: 3}
+    textura: {fileID: 2800000, guid: f697ac14375c7414bb4459322ecd51e0, type: 3}
     value: 200
-    owner: 0
-  - breadName: Rabanada
+    score: 3
+  - breadName: Cupcake
+    sprite: {fileID: 21300000, guid: 58637ba73b392e54a9858144191638c0, type: 3}
+    textura: {fileID: 2800000, guid: 58637ba73b392e54a9858144191638c0, type: 3}
     value: 500
-    owner: 0
+    score: 5
+  - breadName: Croissant
+    sprite: {fileID: 21300000, guid: 6cfa3541cddd11841b66f37f87f40859, type: 3}
+    textura: {fileID: 2800000, guid: 6cfa3541cddd11841b66f37f87f40859, type: 3}
+    value: 1000
+    score: 10
