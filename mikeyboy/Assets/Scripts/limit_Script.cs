@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class limit_Script : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class limit_Script : MonoBehaviour
             if(player.hp <= 0)
             {
                 inventory.score += player.GetComponent<points>().score;
+                SceneManager.LoadScene("BakedGoodsStore");
             }
         }
     }

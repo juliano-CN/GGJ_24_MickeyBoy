@@ -45,8 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   house: {fileID: 3829253054159195669, guid: 6122eaabaa3daaa4b91e93d76764f8ea, type: 3}
-  spawnIntervalRange: {x: 1, y: 3}
-  sprite:
-  - {fileID: 21300000, guid: 488f9c0c54c682343a12ae6b84a5089b, type: 3}
-  - {fileID: 21300000, guid: dd8cf641a29818d4087ba1d82a5a10c3, type: 3}
-  - {fileID: 21300000, guid: 6505cadcf4068d548b912c5e25d04fe8, type: 3}
+  spawnIntervalRange: {x: 2, y: 5}
+  rotat: {x: 0, y: 0, z: 0}
