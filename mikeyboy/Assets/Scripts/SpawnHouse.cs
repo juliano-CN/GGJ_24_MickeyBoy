@@ -8,6 +8,8 @@ public class SpawnHouse : MonoBehaviour
     GameObject house;
     [SerializeField]
     Vector2 spawnIntervalRange;
+    [SerializeField] public Vector3 rotat;
+
 
     void Start()
     {
@@ -19,7 +21,7 @@ public class SpawnHouse : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(Random.Range(spawnIntervalRange.x, spawnIntervalRange.y));
-            GameObject _house = Instantiate(house, transform.position, Quaternion.identity);
+            GameObject _house = Instantiate(house, transform.position, Quaternion.Euler(rotat));
             Destroy(_house, 10);
         }
     }
