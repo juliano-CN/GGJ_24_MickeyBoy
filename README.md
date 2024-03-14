@@ -13,7 +13,7 @@ The game for the Game global Jam 2024.
 #### Dev Team
 * Érica Calil - Game Design
 * Julyano Nary - Programmer      
-* Allan Sol - Programmer - @Alanigma
+* Alan Sol - Programmer - @Alanigma
 * Narto Junior - Producer/Programmer - @nartojunior
 
 ---
