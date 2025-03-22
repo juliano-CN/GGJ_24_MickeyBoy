@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.VFX;
 
 public class bread_Script : MonoBehaviour
 {
     public points points;
-    [SerializeField] VisualEffect vfx;
+    [SerializeField] SpriteRenderer render;
     [SerializeField] inventory inventory;
 
     bread paoAtual;
@@ -21,7 +20,7 @@ public class bread_Script : MonoBehaviour
             }
         }
 
-        vfx.SetTexture("Texture", paoAtual.textura);
+        render.sprite = paoAtual.sprite;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -33,7 +32,11 @@ public class bread_Script : MonoBehaviour
             else
                 points.addPoint(paoAtual.score, 1);
             Destroy(collision);
-            vfx.enabled = false;
+            Destroy(gameObject);
+        }
+        if (collision.tag == "destroy")
+        {
+            Destroy(gameObject);
         }
     }
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - bread
   - house
+  - destroy
   layers:
   - Default
   - TransparentFX

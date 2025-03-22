@@ -20,7 +20,7 @@ MonoBehaviour:
     x: 795
     y: -190
     width: 570
-    height: 1699
+    height: 1720
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -515,7 +515,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614583}
   - {fileID: 8926484042661614585}
   dataType: 0
-  capacity: 32
+  capacity: 8
   stripCapacity: 16
   particlePerStripCount: 16
   needsComputeBounds: 0
@@ -631,7 +631,7 @@ MonoBehaviour:
   m_SubOutputs:
   - {fileID: 8926484042661614590}
   colorMapping: 0
-  uvMode: 2
+  uvMode: 1
   flipbookLayout: 0
   useSoftParticle: 0
   vfxSystemSortPriority: 0
