@@ -11,7 +11,6 @@ public class SpawnHouse : MonoBehaviour
     [SerializeField] public Vector3 rotat;
     [SerializeField] public bool canSpawn = true;
 
-
     void Start()
     {
         StartCoroutine(nameof(Spawn));

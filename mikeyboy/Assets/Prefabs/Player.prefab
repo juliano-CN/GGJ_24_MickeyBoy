@@ -178,7 +178,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1730597184211022793}
   - component: {fileID: 8031344532769901421}
-  - component: {fileID: -9144268521874355800}
   - component: {fileID: 6903455763094959714}
   - component: {fileID: -5856244165449401338}
   - component: {fileID: 7783066187343712730}
@@ -259,23 +258,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-9144268521874355800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5917289334766900028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d54cec6ce5fdf6c4dbf88205927e79b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  breadBullet: {fileID: 5252469809504170724, guid: 736cdc536e121964aaac7a53daf6098f, type: 3}
-  disparoAudio: {fileID: -5856244165449401338}
-  force: {x: 200, y: 300}
-  points: {fileID: 6903455763094959714}
-  hp: 0
 --- !u!114 &6903455763094959714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,6 +272,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   textScore: {fileID: 0}
+  pointAudio: {fileID: 0}
+  emotes: []
 --- !u!82 &-5856244165449401338
 AudioSource:
   m_ObjectHideFlags: 0

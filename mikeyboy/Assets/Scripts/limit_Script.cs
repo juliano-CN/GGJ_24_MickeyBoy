@@ -67,6 +67,9 @@ public class limit_Script : MonoBehaviour
                     player.canInput = false;
                 }
             }                      
+        }else if(collision.tag == "bread")
+        {
+            Destroy(collision.gameObject);
         }
     }
 }

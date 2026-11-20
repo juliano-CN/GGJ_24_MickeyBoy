@@ -21,10 +21,10 @@ public class ScoreUp : MonoBehaviour
     bread proximoPao;
     public float timeAwaiting = 1.5f;
 
-    void Start()
-    {
+    /*void Start()
+    //{
         //StartCoroutine(nameof(AtualizaScore));
-    }
+    }*/
 
     private void OnEnable()
     {
@@ -46,7 +46,7 @@ public class ScoreUp : MonoBehaviour
         scoreText.text = inventory.lastScore.ToString();
         primeiroPao.sprite = paoAtual.sprite;
         segundoPao.sprite = proximoPao.sprite;
-        progressBar.fillAmount = ((float)inventory.lastScore - (float)paoAtual.value) / ((float)proximoPao.value - (float)paoAtual.value);
+        progressBar.fillAmount = Mathf.Abs(((float)inventory.lastScore - (float)paoAtual.value) / ((float)proximoPao.value - (float)paoAtual.value));
         
         if(inventory.lastScore < inventory.score)
         {

@@ -113,7 +113,6 @@ MonoBehaviour:
   points: {fileID: 0}
   vfx: {fileID: 7937217785875770679}
   inventory: {fileID: 11400000, guid: 20b8cf15570c6b54ea6ded5f7f378da4, type: 2}
-  pointAudio: {fileID: 0}
 --- !u!73398921 &8448662643084219538
 VFXRenderer:
   serializedVersion: 1
@@ -153,7 +152,7 @@ VFXRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
 --- !u!2083052967 &7937217785875770679
 VisualEffect:
   m_ObjectHideFlags: 0

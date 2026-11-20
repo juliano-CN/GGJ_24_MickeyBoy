@@ -9,7 +9,7 @@ public class House : MonoBehaviour
 
     public Sprite[] sprite;
     SpriteRenderer sr;
-    SpawnHouse sh;
+    //SpawnHouse sh;
 
     void Start()
     {
@@ -26,9 +26,6 @@ public class House : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "bread")
-        {
-            Destroy(collision);
-        }
+            Destroy(collision.gameObject);
     }
-
 }
